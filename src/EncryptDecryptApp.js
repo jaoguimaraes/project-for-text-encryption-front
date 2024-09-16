@@ -22,7 +22,7 @@ function EncryptDecryptApp() {
           },
         });
         setResponseMessage('Arquivo criptografado com sucesso!');
-        console.log(response.data); // Aqui você pode processar a resposta (ex: baixar o arquivo)
+        console.log(response.data); // Aqui você pode processar a resposta (ex: baixar o arquivo) 
       } catch (error) {
         setResponseMessage('Erro ao criptografar o arquivo.');
         console.error(error);

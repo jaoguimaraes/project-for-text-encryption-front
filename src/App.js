@@ -5,7 +5,7 @@ import EncryptDecryptApp from './EncryptDecryptApp';  // Importa o componente
 function App() {
   return (
     <div className="App">
-      <EncryptDecryptApp />  {/* Renderiza o componente */}
+      <EncryptDecryptApp />  {/* Renderiza o componente*/}
     </div>
   );
 }
