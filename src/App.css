@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Estilos base para corpo e container */
+body, html {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+/* Container centralizado */
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 480px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 1024px) {
+  .container {
+    max-width: 800px; /* Aumenta a largura máxima para desktop */
+    padding: 60px; /* Aumenta o padding para dar mais espaçamento */
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Estilo do título */
+h1 {
+  font-size: 6vw;
+  color: #333;
+  margin-bottom: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 35px; /* Aumenta o tamanho da fonte do título para desktop */
+  }
+}
+
+/* Input de arquivo */
+input[type="file"] {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 3.1vw;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  input[type="file"] {
+    font-size: 18px; /* Aumenta o tamanho do input no desktop */
+    padding: 15px;
+  }
+}
+
+/* Grupo de botões */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+@media (min-width: 1024px) {
+  .buttons {
+    gap: 20px; /* Mais espaço entre os botões no desktop */
+  }
+}
+
+/* Estilos dos botões */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 4vw;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+button:last-child {
+  background-color: #2196F3;
+}
+
+button:last-child:hover {
+  background-color: #0b7dda;
+}
+
+@media (min-width: 1024px) {
+  button {
+    font-size: 18px; /* Aumenta o tamanho dos botões no desktop */
+    padding: 15px 30px; /* Mais espaçamento para desktop */
+  }
+}
+
+/* Estilo da mensagem de retorno (alerta) */
+.response-message {
+  margin-top: 20px;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: opacity 0.5s ease, background-color 0.3s ease;
+}
+
+.response-message.show {
+  opacity: 1; /* Torna o alerta visível */
+}
+
+/* Estilos para mensagens de sucesso */
+.response-message.success {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+/* Estilos para mensagens de erro */
+.response-message.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+@media (min-width: 1024px) {
+  .response-message {
+    font-size: 16px;
+    padding: 20px;
   }
 }
